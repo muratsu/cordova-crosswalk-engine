@@ -25,7 +25,7 @@ Cordova CLI:
 1. Install the latest version of the Cordova CLI from npm (Requires at least 3.5.0-0.2.6)
 2. Pull down the `4.0.x` branch of [Apache Cordova](https://github.com/apache/cordova-android) found here (https://github.com/apache/cordova-android/tree/4.0.x)
 3. Clone this repository.
-4. Run `sh fetch_libs.sh` to download the Crosswalk library
+4. Run `sh fetch_libs.sh` or `fetch_libs.bat` to download the Crosswalk library
 5. Create a project with `cordova create`
 6. Add the Android platform with `cordova platform add <path to cordova-android>`
 7. Add the Crosswalk Engine plugin with `cordova plugin add <path to crosswalk-engine-plugin>`
