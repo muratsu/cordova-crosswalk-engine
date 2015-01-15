@@ -10,6 +10,11 @@ Function Download ($file)
     $path = (Get-Item -Path ".\" -Verbose).FullName + "\libs\xwalk_core_library\";
     Write-Host("Installing $file into xwalk_core_library...");
     $helper.NameSpace($path).CopyHere($files, 0x14);
+    cd 'libs\xwalk_core_library'
+    $folder = (gci crosswalk-webview*).FullName;
+    Copy-Item ($folder + "\*") .\ -Force -Recurse -ea si;
+    Remove-Item $folder -Force -Recurse -ea si;
+    cd '..\..'
     Remove-Item("library.zip");
 }
 
